@@ -38,14 +38,17 @@ class Game
   attr_accessor :player1, :player2
 
   def initialize player1, player2
+
     @player1 = Player.new player2
     @player2 = Player.new player1
     @current_player = @player1
     puts 'Welcome to the game'
     self.start
+
   end
 
   def start 
+
     if (@player1.lives && @player2.lives) > 0
       self.switch_player
       self.generate_question
@@ -57,7 +60,9 @@ class Game
 
 
   def switch_player
+
     @current_player == @player1? @current_player = @player2 : @current_player = @player1
+  
   end
 
   def generate_question
@@ -69,9 +74,11 @@ class Game
     puts question = "what does #{num1} plus #{num2} equal?"
     player_answer = gets.chomp.to_i
     self.checks_answer player_answer
+
   end
 
   def checks_answer player_answer
+
     if player_answer == @answer
       puts "Bravoooo"
       self.start
@@ -79,13 +86,12 @@ class Game
       puts "Seriosuly? No"
       @current_player.lives -= 1
     end
+
     self.start
+
   end
 
-
 end
-
-
 
 gameone = Game.new 'Bana', 'Ronan'
 
