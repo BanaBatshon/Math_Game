@@ -1,4 +1,4 @@
-# planning:
+# Planning:
 
 # Nouns: 
 # - Player: 
@@ -21,7 +21,7 @@
     # - invokes the switch player method
     # - if game is still going (lives > 0), it invokes the question method
     # - if a player has lost, prints who won by how many lives
-# = Swith user method:
+# = Swith User method:
     # - switches the current player
 
 class Player
