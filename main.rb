@@ -1,21 +1,33 @@
 # planning:
 
 # nouns: 
-# - players : gets names of two players
-# - lives : starts at 3, keeps track of lives of player 1 & 2
-# - Math equation : generates two random numbers to add
-# - Math answer: checks if the players answers are correct  
+# - player: 
+    # - state: name, lives
+    # - behavior:
+# - Question:
+    # - state: 
+    # - behavior: generates an eqn from two random numbers
+# - game:
+    # - state: players, lives
+    # - behavior: checks_answer, generte_quation, 
 
 class Player
-  attr_accessor :name
+  attr_accessor :name, :lives
 
-  def initialize name
+  def initialize name, lives
     @name = name
+    @lives = 3
   end
 
 end
 
+
+
 player1 = Player.new 'Bob'
 player2 = Player.new 'Bobette'
-puts player1.name
-puts player2.name
+puts player1.name = 'natasha'
+puts player2.lives
+puts Question
+
+# Game.new player1, player2
+#  puts Game.new 'Bana', 'Ronan'
